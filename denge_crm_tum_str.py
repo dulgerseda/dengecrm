@@ -185,6 +185,7 @@ def main():
         ax.set_ylabel('Satın Alma Sayısı')
         ax.grid(True)
         ax.set_xticks(range(1, 13))
+        plt.show(block=True)
 
         # Streamlit'e grafik çizimi yap
         st.pyplot(fig)
@@ -231,5 +232,8 @@ if __name__ == "__main__":
 # streamlit run denge_crm_tum_str.py
 # RSE CONZ
 
+
+df_onerı = pd.read_excel(r"C:\Users\enslab\PycharmProjects\pythonProject\V2.xlsx",
+                         sheet_name="LABONERI")
 st.write("Tam DataFrame:")
-st.dataframe(df)
+st.dataframe(df_onerı)
