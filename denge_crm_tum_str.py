@@ -185,7 +185,6 @@ def main():
         ax.set_ylabel('Satın Alma Sayısı')
         ax.grid(True)
         ax.set_xticks(range(1, 13))
-        plt.show(block=True)
 
         # Streamlit'e grafik çizimi yap
         st.pyplot(fig)
