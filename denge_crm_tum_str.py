@@ -201,7 +201,7 @@ def main():
         df = grouped_df
 
         # Kullanıcıdan ürün adı girişi alma
-        user_input = st.text_input("Ürün adı girin:")
+        user_input = st.text_input("Rakip Ürün adı girin:")
 
         # Kullanıcı giriş yaptığında işlemleri gerçekleştirme
         if user_input:
