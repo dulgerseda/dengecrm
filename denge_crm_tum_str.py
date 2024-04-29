@@ -3,8 +3,7 @@ import streamlit as st
 import pandas as pd
 import datetime as dt
 
-df = pd.read_excel(r"C:\Users\enslab\PycharmProjects\pythonProject\V2.xlsx",
-                   sheet_name="Sayfa1")
+df = pd.read_excel(r"V2.xlsx", sheet_name="Sayfa1")
 
 df = df.groupby('Fatura').agg({
     'Cari': 'first',  # Her grup için ilk CustomerID değerini al
@@ -161,8 +160,7 @@ def main():
 
     with tab2:
         st.title('Müşteri Aylık Satın Alma İstatistikleri')
-        df = pd.read_excel(r"C:\Users\enslab\PycharmProjects\pythonProject\V2.xlsx",
-                           sheet_name="Sayfa1")
+        df = pd.read_excel(r"V2.xlsx", sheet_name="Sayfa1")
         df = df.groupby('Fatura').agg({
             'Cari': 'first',  # Her grup için ilk CustomerID değerini al
             'Ad': 'first',
@@ -192,8 +190,7 @@ def main():
     with tab3:
         st.title('Ürün Öneri Sistemi')
         # Excel dosyasını okuma ve DataFrame oluşturma
-        df = pd.read_excel(r"C:\Users\enslab\PycharmProjects\pythonProject\V2.xlsx",
-                           sheet_name="LABONERI")
+        df = pd.read_excel(r"V2.xlsx", sheet_name="LABONERI")
         # DataFrame'i gruplayarak önerilen ürün adlarını ve kodlarını listeleme
         grouped_df = df.groupby('UrunAdi').agg({
             'OnerilenUrunAdi': lambda x: list(x),
@@ -232,7 +229,6 @@ if __name__ == "__main__":
 # RSE CONZ
 
 
-df_onerı = pd.read_excel(r"C:\Users\enslab\PycharmProjects\pythonProject\V2.xlsx",
-                         sheet_name="LABONERI")
+df_onerı = pd.read_excel(r"V2.xlsx", sheet_name="LABONERI")
 st.write("Tam DataFrame:")
 st.dataframe(df_onerı)
