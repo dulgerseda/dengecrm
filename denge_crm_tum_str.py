@@ -220,6 +220,9 @@ def main():
 
                 st.write("Tam DataFrame:")
                 st.dataframe(df)
+        df_onerı = pd.read_excel(r"V2.xlsx", sheet_name="LABONERI")
+        st.write("Tam DataFrame:")
+        st.dataframe(df_onerı)
 
 
 if __name__ == "__main__":
@@ -227,8 +230,3 @@ if __name__ == "__main__":
 
 # streamlit run denge_crm_tum_str.py
 # RSE CONZ
-
-
-df_onerı = pd.read_excel(r"V2.xlsx", sheet_name="LABONERI")
-st.write("Tam DataFrame:")
-st.dataframe(df_onerı)
