@@ -221,9 +221,15 @@ def main():
                 st.write("Bu ürün adıyla ilgili bir öneri bulunamadı.")
                 st.title('Ürün Öneri Sistemi')
 
+                st.write("Tam DataFrame:")
+                st.dataframe(df)
+
 
 if __name__ == "__main__":
     main()
 
-# streamlit run denge_crm_tüm_str.py
+# streamlit run denge_crm_tum_str.py
 # RSE CONZ
+
+st.write("Tam DataFrame:")
+st.dataframe(df)
